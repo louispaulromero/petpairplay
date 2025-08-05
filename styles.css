@@ -1,47 +1,95 @@
+/* Merged CSS file combining styles_1 and styles_2 with consistent structure */
+
 body {
-  background: #f5f6fa;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
+    background: #f5f6fa; /* from styles_1 */
+    display: flex; /* from styles_1 */
+    flex-direction: column; /* from styles_1 */
+    min-height: 100vh; /* from styles_1 */
+    margin: 0; /* from both (same) */
+    justify-content: center; /* from styles_1 */
+    align-items: center; /* from styles_1 */
+    font-family: 'Poppins', 'Arial', sans-serif; /* combined font-families with priority to styles_2 */
+    background-color: #fff; /* from styles_2, but overridden by background from styles_1 for final color */
+}
+
+/* Header (from styles_2) */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.icon-btn img {
+    width: 30px;
+    height: 30px;
 }
 
 .nav-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  margin: 24px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0;
 }
 
 button {
-  background: #346beb;
-  color: #fff;
-  padding: 16px 30px;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  outline: none;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(52, 107, 235, 0.12);
-  transition: background 0.2s;
-  user-select: none;
+    background: #346beb;
+    color: #fff;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(52, 107, 235, 0.12);
+    transition: background 0.2s;
+    user-select: none;
 }
 
 button:active {
-  background: #2651b9;
+    background: #2651b9;
 }
 
 @media (max-width: 600px) {
-  button {
-    padding: 14px 12px;
-    font-size: 16px;
-  }
-  .nav-buttons {
-    gap: 12px;
-  }
+    button {
+        padding: 14px 12px;
+        font-size: 16px;
+    }
+    .nav-buttons {
+        gap: 12px;
+    }
 }
