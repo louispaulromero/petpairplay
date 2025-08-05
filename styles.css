@@ -1,12 +1,52 @@
 body {
-  background: #f5f6fa;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   margin: 0;
-  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  font-family: Arial, sans-serif;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.header-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.icon-btn img {
+  width: 30px;
+  height: 30px;
 }
 
 .nav-buttons {
