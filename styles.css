@@ -1,14 +1,21 @@
 body {
-  background: #f5f6fa;
+  background-color: #1e1e1e;
+  color: #333;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Fira Sans', Arial, sans-serif;
 }
 
+h1 {
+  color: #fff;
+}
+
+/* Navigation Buttons */
 .nav-buttons {
   display: flex;
   gap: 20px;
@@ -17,7 +24,7 @@ body {
   margin: 24px 0;
 }
 
-button {
+.nav-buttons button {
   background: #346beb;
   color: #fff;
   padding: 16px 30px;
@@ -32,16 +39,90 @@ button {
   user-select: none;
 }
 
-button:active {
+.nav-buttons button:active {
   background: #2651b9;
 }
 
 @media (max-width: 600px) {
-  button {
-    padding: 14px 12px;
-    font-size: 16px;
-  }
   .nav-buttons {
     gap: 12px;
   }
+
+  .nav-buttons button {
+    padding: 14px 12px;
+    font-size: 16px;
+  }
+}
+
+/* Filter Box */
+.filter-box {
+  background-color: #f7f7f7;
+  border: 2px solid #1ba1f2;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 280px;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  accent-color: #1ba1f2;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.time-slider {
+  width: 100%;
+  accent-color: #1ba1f2;
+}
+
+.slider-value {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #1e1e1e;
+  font-weight: 500;
+}
+
+.apply-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #d0d0d0;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.apply-button:hover {
+  background-color: #b0b0b0;
 }
