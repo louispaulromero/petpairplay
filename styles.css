@@ -93,3 +93,53 @@ button:active {
         gap: 12px;
     }
 }
+
+    
+.button-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.home.hidden, .btn.hidden {
+    display: none;
+}
+
+.planet-blurb {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    &.hidden {
+      display: none;
+    }
+}
+
+
+.planet-image {
+    flex: 1;
+}
+
+.planet-image img {
+    max-width: 100%;
+}
+
+.planet-info {
+    flex: 2;
+}
+
+.home img {
+    max-height: 220px;
+}
+
+.home .card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#home-button{
+     background-color: red;
+}
