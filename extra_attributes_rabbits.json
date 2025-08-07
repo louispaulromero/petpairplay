@@ -5,6 +5,7 @@
         "id": "Rabbit 1",
         "image": "rabbit_images/rabbit1.png",
         "species": "Rabbit",
+
         "name": "Ball",
         "sex": "Male",
         "breed": "Netherland Dwarf",
@@ -26,13 +27,12 @@
         "biography": ""
       },
       "filter_menu": {
-        //add what you need here
+
       },
       "simulation_page": {
-        //add what you need here
+
       }
     },
-
     {
       "card_page": {
         "id": "Rabbit 2",
@@ -58,13 +58,12 @@
         "biography": ""
       },
       "filter_menu": {
-        //add what you need here
+
       },
       "simulation_page": {
-        //add what you need here
+
       }
     },
-
     {
       "card_page": {
         "id": "Rabbit 3",
@@ -90,13 +89,12 @@
         "biography": ""
       },
       "filter_menu": {
-        //add what you need here
+
       },
       "simulation_page": {
-        //add what you need here
+
       }
     },
-
     {
       "card_page": {
         "id": "Rabbit 4",
@@ -122,10 +120,10 @@
         "biography": ""
       },
       "filter_menu": {
-        //add what you need here
+
       },
       "simulation_page": {
-        //add what you need here
+
       }
     }
   ]
