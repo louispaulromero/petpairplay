@@ -1,0 +1,131 @@
+{
+  "rabbits": [
+    {
+      "card_page": {
+        "id": "Rabbit 1",
+        "image": "rabbit_images/rabbit1.png",
+        "species": "Rabbit",
+
+        "name": "Ball",
+        "sex": "Male",
+        "breed": "Netherland Dwarf",
+        "age": 2,
+        "adoption_fee": 50
+      },
+      "details_page": {
+        "id": "Rabbit 1",
+        "image": "rabbit_images/rabbit1.png",
+
+        "location": "Springfield Animal Shelter",
+        "distance": 15.2,
+        "sex": "Male",
+        "breed": "Netherland Dwarf",
+        "weight": 2.3,
+        "age": 2,
+        "adoption_fee": 50,
+        "personality_traits": ["friendly", "curious", "playful"],
+        "biography": ""
+      }
+    },
+    {
+      "card_page": {
+        "id": "Rabbit 2",
+        "image": "rabbit_images/rabbit2.png",
+        "species": "Rabbit",
+        "name": "Floppy",
+        "sex": "Female",
+        "breed": "Holland Lop",
+        "age": 3,
+        "adoption_fee": 60
+      },
+      "details_page": {
+        "id": "Rabbit 2",
+        "image": "rabbit_images/rabbit2.png",
+        "location": "Greenfield Animal Shelter",
+        "distance": 10.5,
+        "sex": "Female",
+        "breed": "Holland Lop",
+        "weight": 2.8,
+        "age": 3,
+        "adoption_fee": 60,
+        "personality_traits": ["gentle", "shy", "affectionate"],
+        "biography": ""
+      }
+    },
+    {
+      "card_page": {
+        "id": "Rabbit 3",
+        "image": "rabbit_images/rabbit3.png",
+        "species": "Rabbit",
+        "name": "Thumper",
+        "sex": "Male",
+        "breed": "Lionhead",
+        "age": 1,
+        "adoption_fee": 55
+      },
+      "details_page": {
+        "id": "Rabbit 3",
+        "image": "rabbit_images/rabbit3.png",
+        "location": "Downtown Animal Shelter",
+        "distance": 8.7,
+        "sex": "Male",
+        "breed": "Lionhead",
+        "weight": 2.0,
+        "age": 1,
+        "adoption_fee": 55,
+        "personality_traits": ["energetic", "curious", "friendly"],
+        "biography": ""
+      }
+    },
+    {
+      "card_page": {
+        "id": "Rabbit 4",
+        "image": "rabbit_images/rabbit4.png",
+        "species": "Rabbit",
+        "name": "Snowball",
+        "sex": "Female",
+        "breed": "Flemish Giant",
+        "age": 4,
+        "adoption_fee": 70
+      },
+      "details_page": {
+        "id": "Rabbit 4",
+        "image": "rabbit_images/rabbit4.png",
+        "location": "Eastside Animal Shelter",
+        "distance": 12.3,
+        "sex": "Female",
+        "breed": "Flemish Giant",
+        "weight": 6.5,
+        "age": 4,
+        "adoption_fee": 70,
+        "personality_traits": ["calm", "gentle", "loving"],
+        "biography": ""
+      }
+    },
+    {
+      "card_page": {
+        "id": "Rabbit 5",
+        "image": "rabbit_images/rabbit1.png",
+        "species": "Rabbit",
+        "name": "Snowball",
+        "sex": "Female",
+        "breed": "Flemish Giant",
+        "age": 4,
+        "adoption_fee": 70
+      },
+      "details_page": {
+        "id": "Rabbit 5",
+        "image": "rabbit_images/rabbit1.png",
+        "location": "Eastside Animal Shelter",
+        "distance": 12.3,
+        "sex": "Female",
+        "breed": "Flemish Giant",
+        "weight": 6.5,
+        "age": 4,
+        "adoption_fee": 70,
+        "personality_traits": ["calm", "gentle", "loving"],
+        "biography": ""
+      }
+    }
+  ]
+}
