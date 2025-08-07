@@ -25,6 +25,12 @@
         "adoption_fee": 50,
         "personality_traits": ["friendly", "curious", "playful"],
         "biography": ""
+      },
+      "filter_menu": {
+
+      },
+      "simulation_page": {
+
       }
     },
     {
@@ -50,6 +56,12 @@
         "adoption_fee": 60,
         "personality_traits": ["gentle", "shy", "affectionate"],
         "biography": ""
+      },
+      "filter_menu": {
+
+      },
+      "simulation_page": {
+
       }
     },
     {
@@ -75,6 +87,12 @@
         "adoption_fee": 55,
         "personality_traits": ["energetic", "curious", "friendly"],
         "biography": ""
+      },
+      "filter_menu": {
+
+      },
+      "simulation_page": {
+
       }
     },
     {
@@ -100,6 +118,12 @@
         "adoption_fee": 70,
         "personality_traits": ["calm", "gentle", "loving"],
         "biography": ""
+      },
+      "filter_menu": {
+
+      },
+      "simulation_page": {
+
       }
     }
   ]
