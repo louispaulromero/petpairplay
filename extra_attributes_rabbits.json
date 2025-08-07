@@ -27,13 +27,12 @@
       },
       "filter_menu": {
         //add what you need here
-      }
-      ,
+      },
       "simulation_page": {
         //add what you need here
       }
     },
-    
+
     {
       "card_page": {
         "id": "Rabbit 2",
@@ -60,12 +59,12 @@
       },
       "filter_menu": {
         //add what you need here
-      }
-      ,
+      },
       "simulation_page": {
         //add what you need here
       }
     },
+
     {
       "card_page": {
         "id": "Rabbit 3",
@@ -92,12 +91,12 @@
       },
       "filter_menu": {
         //add what you need here
-      }
-      ,
+      },
       "simulation_page": {
         //add what you need here
       }
     },
+
     {
       "card_page": {
         "id": "Rabbit 4",
@@ -124,8 +123,7 @@
       },
       "filter_menu": {
         //add what you need here
-      }
-      ,
+      },
       "simulation_page": {
         //add what you need here
       }
