@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pet Pair Play</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" href="styles.css" />
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
-
-    <!--
-    <link rel="stylesheet" type="text/css" href="../css/main.css" />
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
-    -->
-
+    <style>
+      /* Add this to keep nav-buttons fixed at the bottom */
+      .nav-buttons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #fff; /* Adjust to match your theme; prevents transparency issues */
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it stays on top of other content */
+      }
+      .nav-buttons button {
+        margin: 0 10px; /* Spacing between buttons */
+      }
+      /* Optional: Add padding to body to prevent content overlap with fixed buttons */
+      body {
+        padding-bottom: 60px; /* Adjust based on button height */
+      }
+    </style>
   </head>
-
 
   <body>
     <div class="container">
@@ -27,7 +38,6 @@
           <img src="./assets/petpairplaylogo.svg" alt="PetPairPlay Logo" class="logo-icon" />
           <span class="logo-text">Pet Pair Play</span>
         </div>
-
         <div class="header-icons">
           <button class="icon-btn" aria-label="Learn">
             <img src="./assets/education-center.svg" alt="Graduation cap icon for Education Center" />
@@ -46,9 +56,83 @@
         <button class="btn btn-secondary hidden" id="home-button">Back</button>
       </header>
 
+
+
+
       <div class="home" id="home-page">
         <div class="query">
+
+
           <form class="input-group mb-4" id="suggest-form">
+
+            <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav-->
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div class="filters">
+                <h1 href="#">Filters</h1>
+                <a href="#">Location</a>
+                  <input type="checkbox" id="near" name="near" value="near">
+                    <label for="near">Near</label> 
+                <a href="#">Species</a>
+                  <input type="checkbox" id="cat" name="cat" value="cat">
+                    <label for="cat">Cat</label>          
+                  <input type="checkbox" id="dog" name="dog" value="dog">
+                    <label for="dog">Dog</label>
+                  <input type="checkbox" id="rabbit" name="rabbit" value="rabbit">
+                    <label for="rabbit">Rabbit</label>
+
+                <a href="#">Sex</a>
+                  <input type="checkbox" id="female" name="female" value="female">
+                    <label for="female">Female</label>
+
+                  <input type="checkbox" id="male" name="male" value="male">
+                    <label for="male">Male</label>
+
+                <a href="#">Age</a>
+                  <input type="checkbox" id="baby" name="baby" value="baby">
+                    <label for="baby">Baby</label>
+                  <input type="checkbox" id="adult" name="adult" value="adult">
+                    <label for="adult">Adult</label>
+                  <input type="checkbox" id="senior" name="senior" value="senior">
+                    <label for="senior">Senior</label>
+
+                <a href="#">Size</a>
+                  <input type="checkbox" id="small" name="small" value="small">
+                    <label for="small">Small</label>
+                  <input type="checkbox" id="medium" name="medium" value="medium">
+                    <label for="medium">Medium</label>
+                  <input type="checkbox" id="large" name="large" value="large">
+                    <label for="large">large</label>
+
+                <a href="#">Adoption Fee</a>
+                  <input type="checkbox" id="free" name="free" value="free">
+                    <label for="free">$0</label>
+                  <input type="checkbox" id="under" name="under" value="under">
+                    <label for="under">Under $20</label>
+                  <input type="checkbox" id="over" name="over" value="over">
+                    <label for="over">$20+</label>
+                <a href="#">Open to Special Needs</a>
+                  <input type="checkbox" id="yes" name="yes" value="yes">
+                    <label for="yes">Yes</label>
+                  <input type="checkbox" id="no" name="no" value="no">
+                    <label for="no">No</label>
+
+                <a href="#">Other</a>
+                  <input href="#" type="checkbox" id="hypo" name="hypo" value="hypo">
+                    <label for="hypo">Hypoallergenic</label>
+                  <input type="checkbox" id="good-kids" name="good-kids" value="good-kids">
+                    <label for="good-kids">Good with Kids</label>
+                  <input type="checkbox" id="good-animals" name="good-animals" value="good-animals">
+                    <label for="good-animals">Good with Other Animals</label>
+              </div>
+
+                <input type="submit" value="Apply Filter">
+
+            </div>
+
+            <span class="me-3" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav-->
+
             <input
               type="text"
               class="form-control"
@@ -65,336 +149,89 @@
             </button>
           </form>
         </div>
-
-
-
-
-        <div class="card mb-3" role="button" id="alekhine-button">
-          <div class="row g-0 align-items-center">
-            <div class="col-md-4 text-center">
-              <img
-                src="rabbit_images/rabbit1.png"
-                class="img-fluid rounded-start"
-                alt="Cute Bunny 1"
-              />
-            </div>
-            <div class="col-md-8 d-flex flex-column justify-content-center">
-              <div class="card-body text-center">
-                <h2 class="card-title" id="pet-name"></h2>
-                <p id="pet-sex"></p>
-                <p id="pet-breed"></p>
-                <p id="pet-age"></p>
-                <p id="pet-adoption-fee"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-        <div class="card mb-3" role="button" id="janon-button">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="images/janon.png"
-                class="img-fluid rounded-start"
-                alt="A depiction of the planet Janon, produced by SXDL 1.0"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h2 class="card-title">Janon</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mb-3" role="button" id="guilin-button">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="images/guilin.png"
-                class="img-fluid rounded-start"
-                alt="A depiction of the planet Guilin, produced by SXDL 1.0"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h2 class="card-title">Guilin</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mb-3" role="button" id="jayne-button">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="images/jayne.png"
-                class="img-fluid rounded-start"
-                alt="A depiction of the planet Jayne, produced by SXDL 1.0"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h2 class="card-title">Jayne</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Below are the "sub-pages", hidden for now but revealed when the cards are clicked -->
-
-      <div class="hidden planet-blurb" id="alekhine-blurb">
-        
-<div class="col-md-4 text-center">
-
-        <div class="planet-image">
-          <img
-            src="rabbit_images/rabbit1.png"
-            alt="A depiction of the planet Alekhine, produced by SXDL 1.0"
-          />
-        </div>
-
-</div>
-
-
-        <div class="planet-info">
-          <h2 id="pet-name-dp"></h2>
-          <div id="custom-blurb"></div>
-
-            <p id="pet-location-dp"></p>
-            <p id="pet-distance-dp"></p>            
-            <p id="pet-sex-dp"></p>
-            <p id="pet-breed-dp"></p>
-            <p id="pet-weight-dp"></p>
-            <p id="pet-age-dp"></p>
-            <p id="pet-adoption-fee-dp"></p>
-            <p id="pet-biography-dp"></p>
-            <p id="pet-personality-traits-dp"></p>
-            
-        </div>
-      </div>
-
-      <div class="hidden planet-blurb" id="janon-blurb">
-        <div class="planet-image">
-          <img
-            src="images/janon.png"
-            alt="A depiction of the planet Janon, produced by SXDL 1.0"
-          />
-        </div>
-        <div class="planet-info">
-          <h2>Janon</h2>
-          <div id="custom-blurb"></div>
-          <p>
-            The planet Janon is filled to the brim with nature, both oddly
-            familiar and completely bewildering to natives of Earth. Equalizing
-            wind currents leave most of the planet at an equally tropical
-            temperature, lush with fractal tree-like plants, dotted with
-            reservoirs of mostly-fresh water, and populated with beasts both
-            mighty and meek. Compared to organisms on Earth, animals tend to be
-            less astute (and none is nearly as intelligent as Earth’s primates
-            are), but plants seem to flourish in coordinated patterns, leaving
-            some to believe that they possess some limited intelligence of their
-            own.
-          </p>
-
-          <p>
-            Human outposts are hard to come by, since building them involves
-            cutting through dense jungle in most parts of the world. Those
-            settlements that do exist tend to be densely populated, with
-            tightly-packed tall buildings that look over canopies of trees off
-            in the distance.
-          </p>
-          <p>
-            Janon is known for its exquisite cuisine, a trait unfortunately not
-            coincidental with its rich wildlife; animals’ naturally-evolved
-            instincts on the planet are no match for the skills of even a
-            rudimentary hunter. Already some of the most delectable species on
-            the planet are considered endangered, just a few generations after
-            humanity systematically catalogued which meats were safe to eat,
-            which were toxic, and which seem to just give you the runs.
-          </p>
-          <p>
-            The crown jewel of Janon is Valoret, a city built in a rare clearing
-            occupying around a hundred thousand acres. Local cuisine from around
-            the planet is imported into the city, kept fresh only by the
-            efficiency of a one-of-a-kind aerial logistics system that is held
-            aloft by the globe’s natural wind currents. Beyond the clearing,
-            suburbs expand outwards into the surrounding rainforest, connected
-            by an underground transportation system that keeps the aboveground
-            biosphere largely untouched.
-          </p>
-        </div>
-      </div>
-
-      <div class="hidden planet-blurb" id="guilin-blurb">
-        <div class="planet-image">
-          <img
-            src="images/guilin.png"
-            alt="A depiction of the planet Guilin, produced by SXDL 1.0"
-          />
-        </div>
-        <div class="planet-info">
-          <h2>Guilin</h2>
-          <div id="custom-blurb"></div>
-          <p>
-            Owing to its regular seismic activity, the planet Guilin is a haven
-            for those who enjoy hot springs and impressive geyser displays.
-            Downward erosion caused by fast-moving water has crafted tall stone
-            towers in many regions on the planet, not unlike the world’s
-            namesake back on Earth.
-          </p>
-
-          <p>
-            The largest springs have been commercialized in resorts not unlike
-            water parks, and sizable cities analogous to Earth’s beach towns
-            have sprung up in support of these resorts. Those looking for a
-            quieter place to appreciate the scenery will find no shortage of
-            more private springs, especially far from the more densely-populated
-            areas.
-          </p>
-
-          <p>
-            The natural spires of Guilin have been a foundation for
-            thrill-seeking activities like bungee jumping and rock climbing, but
-            they also serve as serene outlooks for the beautiful vistas of the
-            planet’s features, especially where elevators have been carved into
-            the side of the stone for easier access to the summits.
-          </p>
-
-          <p>
-            Guilin’s natural features aren’t limited to just spires and hot
-            springs. It doesn’t take much travel to explore a myriad of
-            geographic wonders far surpassing anything Earth has to offer. The
-            planet’s public transit is limited, however, since the difficult
-            terrain limits what kinds of infrastructure can be built. Bring your
-            own hovercraft!
-          </p>
-        </div>
-      </div>
-
-      <div class="hidden planet-blurb" id="jayne-blurb">
-        <div class="planet-image">
-          <img
-            src="images/jayne.png"
-            alt="A depiction of the planet Jayne, produced by SXDL 1.0"
-          />
-        </div>
-        <div class="planet-info">
-          <h2>Jayne</h2>
-          <div id="custom-blurb"></div>
-          <p>
-            The planet Jayne, despite its hot weather and limited access to
-            drinking water, is a monument to manual handiwork and a marvel of
-            modern sculpture. Every historical figure, even those of middling
-            significance, is personally commemorated by a life-sized statue. No
-            one knows how many statues are present on the planet, but current
-            estimates suggest that Jayne’s largest city adds dozens to the count
-            every day. There are figures here enshrined in stone who don’t even
-            meet the notability requirements of Galactic Wikipedia.
-          </p>
-          <p>
-            For reasons that are fuzzy even to the most dedicated historians,
-            Jayne’s cities have universally adopted a policy of redistributing
-            wealth through a monthly ceremony during which golden coins are
-            dropped from the sky by aerial vehicles. Some question the
-            distribution mechanism, but no one is willing to reform the system
-            if it means breaking tradition.
-          </p>
-          <p>
-            If you happen to be present during a distribution, even as a
-            tourist, you’re welcome to take what you can grab! Some
-            penny-pinching visitors have been known to break even on their
-            visits to the planet.
-          </p>
-          <p>
-            Traditionally, the exact timing of the monthly money-drop comes as a
-            surprise to residents. When the gold is dropped during just the
-            right twilight, some say, not without a hint of nostalgia, that the
-            tumbling coins off in the distance twinkle like fireflies.
-          </p>
-        </div>
       </div>
     </div>
-
-
-  <div class="nav-buttons">
-    <button id="btn-back"><=</button>
-    <button id="btn-home">Home</button>
-    <button id="btn-forward">=></button>
-  </div>
-
-
+<!--
+    <div class="nav-buttons">
+      <button id="btn-back">&lt;=</button>
+      <button id="btn-home">Home</button>
+      <button id="btn-forward">=&gt;</button>
+    </div>
+-->
     <script>
-      //New code
+      // Fetch JSON and dynamically generate rabbit cards and blurbs
+      fetch('https://raw.githubusercontent.com/louispaulromero/petpairplay/refs/heads/louis/rabbits.json')
+        .then(response => response.json())
+        .then(data => {
+          if (!data.rabbits || data.rabbits.length === 0) {
+            console.error('No rabbits found in JSON');
+            return;
+          }
 
+          const homePage = document.getElementById('home-page');
+          const container = document.querySelector('.container'); // Append blurbs to main container
 
-        fetch('https://raw.githubusercontent.com/louispaulromero/petpairplay/refs/heads/louis/rabbits.json')
-            .then(response => response.json())
-            .then(data => {
+          data.rabbits.forEach((rabbit, index) => {
+            // Extract data
+            const cardPage = rabbit.card_page;
+            const detailsPage = rabbit.details_page;
 
-                // Accessing items: Dot notation for properties
+            // Create dynamic card ID (use name as unique key, lowercase for safety)
+            const rabbitId = cardPage.name.toLowerCase().replace(/\s+/g, '-');
+            const cardButtonId = `${rabbitId}-button`;
+            const blurbId = `${rabbitId}-blurb`;
 
-                //variables for card page
-                const name_json = data.rabbits[0].card_page.name;
+            // Generate card HTML (primary rabbit card)
+            const card = document.createElement('div');
+            card.className = 'card mb-3';
+            card.id = cardButtonId;
+            card.role = 'button';
+            card.innerHTML = `
+              <div class="row g-0 align-items-center">
+                <div class="col-md-4 text-center">
+                  <img src="rabbit_images/rabbit${index + 1}.png" class="img-fluid rounded-start mt-4" alt="${cardPage.name}" />
+                </div>
+                <div class="col-md-8 d-flex flex-column justify-content-center">
+                  <div class="card-body text-center">
+                    <h2 class="card-title">Name: ${cardPage.name}</h2>
+                    <p>Sex: ${cardPage.sex}</p>
+                    <p>Breed: ${cardPage.breed}</p>
+                    <p>Age: ${cardPage.age}</p>
+                    <p>Adoption Fee: $${cardPage.adoption_fee}</p>
+                  </div>
+                </div>
+              </div>
+            `;
+            homePage.appendChild(card); // Append to home page
 
-                document.getElementById("pet-name").innerHTML = "Name: " + name_json;
+            // Generate blurb HTML (hidden secondary card)
+            const blurb = document.createElement('div');
+            blurb.className = 'hidden planet-blurb';
+            blurb.id = blurbId;
+            blurb.innerHTML = `
+              <div class="col-md-4 text-center">
+                <div class="planet-image">
+                  <img src="rabbit_images/rabbit${index + 1}.png" alt="${cardPage.name}" />
+                </div>
+              </div>
+              <div class="planet-info">
+                <h2>Name: ${cardPage.name}</h2>
+                <div id="custom-blurb"></div>
+                <p>Location: ${detailsPage.location}</p>
+                <p>Distance: ${detailsPage.distance}</p>
+                <p>Sex: ${detailsPage.sex}</p>
+                <p>Breed: ${detailsPage.breed}</p>
+                <p>Weight: ${detailsPage.weight}</p>
+                <p>Age: ${detailsPage.age}</p>
+                <p>Adoption Fee: $${detailsPage.adoption_fee}</p>
+                <p id="pet-biography-dp-${rabbitId}">Biography: Loading...</p>
+                <p>Personality Traits: ${detailsPage.personality_traits.join(', ')}</p>
+              </div>
+            `;
+            container.appendChild(blurb); // Append to container
 
-                const sex_json = data.rabbits[0].card_page.sex;
-                document.getElementById("pet-sex").innerHTML = "Sex: " + sex_json;
-
-
-                const breed_json = data.rabbits[0].card_page.breed
-                document.getElementById("pet-breed").innerHTML = "Breed: " + breed_json;
-
-                const age_json = data.rabbits[0].card_page.age;
-                document.getElementById("pet-age").innerHTML = "Age: " + age_json;
-
-                const adoption_fee_json = data.rabbits[0].card_page.adoption_fee;
-                document.getElementById("pet-adoption-fee").innerHTML = "Adoption Fee: $" + adoption_fee_json;
-
-
-                //variables for details page
-                document.getElementById("pet-name-dp").innerHTML = "Name: " + name_json;
-
-
-                const location_json_dp = data.rabbits[0].details_page.location;
-                document.getElementById("pet-location-dp").innerHTML = "Location: " + location_json_dp;
-
-
-                const distance_json_dp = data.rabbits[0].details_page.distance;
-                document.getElementById("pet-distance-dp").innerHTML = "Distance: " + distance_json_dp;
-
-                const sex_json_dp = data.rabbits[0].details_page.sex;
-                document.getElementById("pet-sex-dp").innerHTML = "Sex: " + sex_json_dp;
-
-                const breed_json_dp = data.rabbits[0].details_page.breed;
-                document.getElementById("pet-breed-dp").innerHTML = "Breed: " + breed_json_dp;
-
-                const weight_json_dp = data.rabbits[0].details_page.weight;
-                document.getElementById("pet-weight-dp").innerHTML = "Weight: " + weight_json_dp;
-
-                const age_json_dp = data.rabbits[0].details_page.age;
-                document.getElementById("pet-age-dp").innerHTML = "Age: " + age_json_dp;
-
-                const adoption_fee_json_dp = data.rabbits[0].details_page.adoption_fee;
-                document.getElementById("pet-adoption-fee-dp").innerHTML = "Adoption Fee: $" + adoption_fee_json_dp;    
-
-                //variables for ai
-                const species_json = data.rabbits[0].card_page.species;  
-                const trait0_json = data.rabbits[0].details_page.personality_traits[0];  
-                const trait1_json = data.rabbits[0].details_page.personality_traits[1];  
-                const trait2_json = data.rabbits[0].details_page.personality_traits[2];  
-
-
-            async function myFunction()
-            {
-              // import fetch from 'node-fetch'; // for node.js
-
+            // Optionally generate AI biography for this rabbit
+            async function generateBiography() {
               const response = await fetch(
                 'https://noggin.rea.gent/future-caterpillar-7765',
                 {
@@ -404,226 +241,96 @@
                     Authorization: 'Bearer rg_v1_mb2h09h86jochxyjt77y4d03f279aerm63cu_ngk',
                   },
                   body: JSON.stringify({
-                    // fill variables here.
-                    "trait1": trait1_json,
-                    "trait2": trait2_json,
-                    "species": species_json,
-                    "breed": breed_json,
-                    "name": name_json,
-                    "trait0": trait0_json,
+                    trait1: detailsPage.personality_traits[1] || '',
+                    trait2: detailsPage.personality_traits[2] || '',
+                    species: cardPage.species || '',
+                    breed: cardPage.breed,
+                    name: cardPage.name,
+                    trait0: detailsPage.personality_traits[0] || '',
                   }),
                 }
-              ).then(response => response.text());
-            document.getElementById("pet-biography-dp").innerHTML = "Biography: " + response;
-
-          console.log(response);
+              ).then(res => res.text());
+              document.getElementById(`pet-biography-dp-${rabbitId}`).innerHTML = `Biography: ${response}`;
             }
-            //enable or disable ai call
-            //myFunction();
+            // generateBiography(); // Uncomment if needed
 
+            // Add click listener to navigate to this blurb
+            document.getElementById(cardButtonId).addEventListener('click', () => {
+              navigateToBlurb(rabbitId);
+            });
+          });
+        })
+        .catch(error => console.error('Error fetching rabbits.json:', error));
 
-
-
-/*
-
-                //variables for card page
-                console.log(name_json);
-                console.log(sex_json);
-                console.log(breed_json);
-                console.log(age_json);
-                console.log(adoption_fee_json);
-
-                //variables for details page
-                console.log(location_json_dp);
-                console.log(distance_json_dp);
-                console.log(sex_json_dp);
-                console.log(breed_json_dp);
-                console.log(weight_json_dp);
-                console.log(age_json_dp);
-                console.log(adoption_fee_json_dp);
-                console.log(trait0_json);
-                console.log(trait1_json);
-                console.log(trait2_json);
-                //details page will need biography
-
-
-                //variables to pass through to ai
-                console.log(species_json);
-                console.log(breed_json);
-                console.log(name_json);
-                console.log(trait0_json);
-                console.log(trait1_json);
-                console.log(trait2_json);
-
-*/
-                });
-
-        document.getElementById("suggest-form").addEventListener("submit", async (event) => 
-
-        {
-          event.preventDefault();
-
-          // YOUR CODE HERE
-
-          //query-input
-          const usersInput = document.querySelector("#query-input").value;
-          console.log(usersInput);
-
-          //ai stuff here
-          /*
-            // import fetch from 'node-fetch'; // for node.js
-
-            const response = await fetch(
-              'https://noggin.rea.gent/future-caterpillar-7765',
-              {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  Authorization: 'Bearer rg_v1_mb2h09h86jochxyjt77y4d03f279aerm63cu_ngk',
-                },
-                body: JSON.stringify({
-                  // fill variables here.
-                  "trait1": trait1_json,
-                  "trait2": trait2_json,
-                  "species": species_json,
-                  "breed": breed_json,
-                  "name": name_json,
-                  "trait0": trait0_json,
-                }),
-              }
-            ).then(response => response.text());
-
-          console.log(response);
-          */
-          //ai stuff here 
-          
-          const planetNames = ["Alekhine","Janon","Guilin","Jayne"];
-          const responseLines = response.split('\n');
-          const planetNameCandidate = responseLines[0].trim();
-          let planetName = null;
-
-          if(planetNames.includes(planetNameCandidate)){
-            planetName = planetNameCandidate;
-            var planetText = responseLines.slice(1).join('\n').trim();
-            const blurbElement = document.querySelector(`#custom-blurb`);
-            if(blurbElement){
-              blurbElement.innerHTML = planetText;
-            }
-          }
-          //navigateToBlurb(planetName);
-
+      // Updated navigateToBlurb to handle dynamic IDs
+      const navigateToBlurb = (id) => {
+        // Hide all blurbs
+        document.querySelectorAll('.planet-blurb').forEach(blurb => {
+          blurb.classList.add('hidden');
         });
 
-      //New code
+        // Show the selected one
+        const targetBlurb = document.getElementById(`${id}-blurb`);
+        if (targetBlurb) {
+          targetBlurb.classList.remove('hidden');
+        }
 
-
-
-
-
-      const blurbElements = {
-        Alekhine: document.getElementById("alekhine-blurb"),
-        Janon: document.getElementById("janon-blurb"),
-        Guilin: document.getElementById("guilin-blurb"),
-        Jayne: document.getElementById("jayne-blurb"),
+        // Hide home and show back button
+        document.getElementById('home-page').classList.add('hidden');
+        document.getElementById('home-button').classList.remove('hidden');
       };
 
       const navigateHome = () => {
-        for (const blurbElement of Object.values(blurbElements)) {
-          blurbElement.classList.add("hidden");
-        }
-
-        document.getElementById("home-page").classList.remove("hidden");
-        document.getElementById("home-button").classList.add("hidden");
+        document.querySelectorAll('.planet-blurb').forEach(blurb => {
+          blurb.classList.add('hidden');
+        });
+        document.getElementById('home-page').classList.remove('hidden');
+        document.getElementById('home-button').classList.add('hidden');
       };
 
-      document.getElementById("home-button").addEventListener("click", () => {
-        navigateHome();
-      });
+      document.getElementById('home-button').addEventListener('click', navigateHome);
 
-      // You can use this function to naviate to one of the four planet subpages.
-      const navigateToBlurb = (planetName) => {
-        if (!blurbElements[planetName]) {
-          throw new Error(`No blurb found for planet ${planetName}`);
-        }
+      // Suggest form handler
+      document.getElementById('suggest-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const usersInput = document.querySelector('#query-input').value;
+        console.log(usersInput);
 
-        for (const [name, blurbElement] of Object.entries(blurbElements)) {
-          if (name === planetName) {
-            blurbElement.classList.remove("hidden");
-          } else {
-            blurbElement.classList.add("hidden");
+        const response = await fetch(
+          'https://noggin.rea.gent/responsible-asp-9597',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: 'Bearer rg_v1_vatz9spc2krrl9u5pottbxbgs3llq4cdxb9m_ngk',
+            },
+            body: JSON.stringify({ input: usersInput }),
           }
+        ).then(res => res.text());
+        console.log(response);
+
+        const planetNames = ['Alekhine', 'Janon', 'Guilin', 'Jayne'];
+        const responseLines = response.split('\n');
+        const planetNameCandidate = responseLines[0].trim();
+        let planetName = null;
+
+        if (planetNames.includes(planetNameCandidate)) {
+          planetName = planetNameCandidate.toLowerCase().replace(/\s+/g, '-'); // Match dynamic ID format
+          const planetText = responseLines.slice(1).join('\n').trim();
+          const blurbElement = document.querySelector('#custom-blurb');
+          if (blurbElement) blurbElement.innerHTML = planetText;
         }
-
-        document.getElementById("home-page").classList.add("hidden");
-        document.getElementById("home-button").classList.remove("hidden");
-      };
-
-      document
-        .getElementById("alekhine-button")
-        .addEventListener("click", () => {
-          navigateToBlurb("Alekhine");
-        });
-
-      document.getElementById("janon-button").addEventListener("click", () => {
-        navigateToBlurb("Janon");
+        if (planetName) navigateToBlurb(planetName);
       });
 
-      document.getElementById("guilin-button").addEventListener("click", () => {
-        navigateToBlurb("Guilin");
-      });
+      //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav 
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
 
-      document.getElementById("jayne-button").addEventListener("click", () => {
-        navigateToBlurb("Jayne");
-      });
-
-      document
-        .getElementById("suggest-form")
-        .addEventListener("submit", async (event) => {
-          event.preventDefault();
-
-          // YOUR CODE HERE
-
-          //query-input
-          const usersInput = document.querySelector("#query-input").value;
-          console.log(usersInput);
-
-          // import fetch from 'node-fetch'; // for node.js
-
-          const response = await fetch(
-            'https://noggin.rea.gent/responsible-asp-9597',
-            {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer rg_v1_vatz9spc2krrl9u5pottbxbgs3llq4cdxb9m_ngk',
-              },
-              body: JSON.stringify({
-                // fill variables here.
-                "input": usersInput,
-              }),
-            }
-          ).then(response => response.text());
-          
-          console.log(response);
-
-          const planetNames = ["Alekhine","Janon","Guilin","Jayne"];
-          const responseLines = response.split('\n');
-          const planetNameCandidate = responseLines[0].trim();
-          let planetName = null;
-
-          if(planetNames.includes(planetNameCandidate)){
-            planetName = planetNameCandidate;
-            var planetText = responseLines.slice(1).join('\n').trim();
-            const blurbElement = document.querySelector(`#custom-blurb`);
-            if(blurbElement){
-              blurbElement.innerHTML = planetText;
-            }
-          }
-          navigateToBlurb(planetName);
-
-        });
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
     </script>
-    <script src="script.js"></script>
-
   </body>
 </html>

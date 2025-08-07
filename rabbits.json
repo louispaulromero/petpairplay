@@ -1,5 +1,8 @@
+//add what you need only to filter_menu and simulation
+//don't change anything else
 {
-  "rabbits": [
+  "rabbits": 
+  [
     {
       "card_page": {
         "id": "Rabbit 1",
@@ -25,8 +28,17 @@
         "adoption_fee": 50,
         "personality_traits": ["friendly", "curious", "playful"],
         "biography": ""
+      },
+      "filter_menu": {
+        //add what you need here for filter menu
+
+      },
+      "simulation": {
+        //add what you need here for simulation
       }
     },
+
+
     {
       "card_page": {
         "id": "Rabbit 2",
@@ -50,8 +62,17 @@
         "adoption_fee": 60,
         "personality_traits": ["gentle", "shy", "affectionate"],
         "biography": ""
+      },
+      "filter_menu": {
+        //add what you need here for filter menu
+
+      },
+      "simulation": {
+        //add what you need here for simulation
       }
     },
+
+
     {
       "card_page": {
         "id": "Rabbit 3",
@@ -75,8 +96,16 @@
         "adoption_fee": 55,
         "personality_traits": ["energetic", "curious", "friendly"],
         "biography": ""
+      },
+      "filter_menu": {
+        //add what you need here for filter menu
+
+      },
+      "simulation": {
+        //add what you need here for simulation
       }
     },
+
     {
       "card_page": {
         "id": "Rabbit 4",
@@ -100,7 +129,48 @@
         "adoption_fee": 70,
         "personality_traits": ["calm", "gentle", "loving"],
         "biography": ""
+      },
+      "filter_menu": {
+        //add what you need here for filter menu
+
+      },
+      "simulation": {
+        //add what you need here for simulation
+      }
+    },
+
+    {
+      "card_page": {
+        "id": "Rabbit 5",
+        "image": "rabbit_images/rabbit4.png",
+        "species": "Rabbit",
+        "name": "Snowball",
+        "sex": "Female",
+        "breed": "Flemish Giant",
+        "age": 4,
+        "adoption_fee": 70
+      },
+      "details_page": {
+        "id": "Rabbit 5",
+        "image": "rabbit_images/rabbit4.png",
+        "location": "Eastside Animal Shelter",
+        "distance": 12.3,
+        "sex": "Female",
+        "breed": "Flemish Giant",
+        "weight": 6.5,
+        "age": 4,
+        "adoption_fee": 70,
+        "personality_traits": ["calm", "gentle", "loving"],
+        "biography": ""
+      },
+      "filter_menu": {
+        //add what you need here for filter menu
+
+      },
+      "simulation": {
+        //add what you need here for simulation
       }
     }
+
   ]
 }
