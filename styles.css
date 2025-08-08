@@ -18,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #e0e0e0;
+    /*border-bottom: 1px solid #e0e0e0;*/
     background-color: white;
 }
 
@@ -200,4 +200,29 @@ body {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.secondary-page-buttons-container {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  gap: 1rem;                /* space between buttons */
+}
+
+.secondary-page-buttons-container button {
+  display: flex;
+  flex-direction: column; /* stack icon above text in each button */
+  align-items: center;
+  border: none;
+  background: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1.12em;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.secondary-page-buttons-container button img {
+  height: 1.6em;
+  margin-bottom: 0.2em;
 }

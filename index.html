@@ -166,6 +166,7 @@
           const homePage = document.getElementById('home-page');
           const container = document.querySelector('.container');
 
+
           data.rabbits.forEach((rabbit, index) => {
             console.log(`Generating card for rabbit ${index + 1}: ${rabbit.card_page.name}`); // Debug each rabbit
 
@@ -204,25 +205,52 @@
             blurb.className = 'hidden planet-blurb';
             blurb.id = blurbId;
             blurb.innerHTML = `
-              <div class="col-md-4 text-center">
-                <div class="planet-image">
+              <div class="d-flex flex-column align-items-center justify-content-center h-100 w-100 text-center">
+                <div class="planet-image mb-3">
                   <img src="${detailsPage.image}" alt="${cardPage.name}" />
                 </div>
-              </div>
-              <div class="planet-info">
-                <h2>Name: ${cardPage.name}</h2>
-                <div id="custom-blurb"></div>
-                <p>Location: ${detailsPage.location}</p>
-                <p>Distance: ${detailsPage.distance}</p>
-                <p>Sex: ${detailsPage.sex}</p>
-                <p>Breed: ${detailsPage.breed}</p>
-                <p>Weight: ${detailsPage.weight}</p>
-                <p>Age: ${detailsPage.age}</p>
-                <p>Adoption Fee: $${detailsPage.adoption_fee}</p>
-                <p id="pet-biography-dp-${rabbitId}">Biography: Loading...</p>
-                <p>Personality Traits: ${detailsPage.personality_traits.join(', ')}</p>
+                <div class="planet-info">
+                  <h2>Name: ${cardPage.name}</h2>
+
+                <div class="secondary-page-buttons-container">
+                  <button class="btn btn-link p-0 d-flex flex-column align-items-center" id="learn-button-1" style="font-weight:500; font-size:1.12em; text-decoration:none;">
+                    <img src="./assets/dogLeash.svg" alt="Learn" style="height:1.6em; margin-bottom:0.2em;">
+                    <span>Learn</span>
+                  </button>
+                  <button class="btn btn-link p-0 d-flex flex-column align-items-center" id="count-button-2" style="font-weight:500; font-size:1.12em; text-decoration:none;">
+                    <img src="./assets/heart.svg" alt="Learn" style="height:1.6em; margin-bottom:0.2em;">
+                    <span>Count</span>
+                  </button>
+                  <button class="btn btn-link p-0 d-flex flex-column align-items-center" id="count-button-3" style="font-weight:500; font-size:1.12em; text-decoration:none;">
+                    <img src="./assets/plusMath.svg" alt="Learn" style="height:1.6em; margin-bottom:0.2em;">
+                    <span>Save</span>
+                  </button>
+                </div>
+
+
+                  <div id="custom-blurb-${rabbitId}"></div>
+                  <p>Location: ${detailsPage.location}</p>
+                  <p>Distance: ${detailsPage.distance}</p>
+                  <p>Sex: ${detailsPage.sex}</p>
+                  <p>Breed: ${detailsPage.breed}</p>
+                  <p>Weight: ${detailsPage.weight}</p>
+                  <p>Age: ${detailsPage.age}</p>
+                  <p>Adoption Fee: $${detailsPage.adoption_fee}</p>
+
+                  <div class="mb-3">
+                    ${detailsPage.personality_traits.map(
+                      trait => `<span class="badge rounded-pill bg-secondary mx-1">${trait}</span>`
+                    ).join('')}
+                  </div>
+
+                  <p id="pet-biography-dp-${rabbitId}">Biography: Loading...</p>
+
+
+                  <button class="btn btn-primary mt-3" id="contact-button-${rabbitId}">Contact</button>
+                </div>
               </div>
             `;
+
             container.appendChild(blurb);
 
             // Optional biography generation (uncomment if needed)
@@ -262,7 +290,7 @@
               const bioElem = document.getElementById("pet-biography-dp-" + rabbitId);
 
               if(bioElem && bioElem.innerHTML.includes("Loading...")){
-                generateBiography();
+                //generateBiography();
               }
             });
           });
@@ -282,6 +310,7 @@
         document.querySelectorAll('.planet-blurb').forEach(blurb => blurb.classList.add('hidden'));
         document.getElementById('home-page').classList.remove('hidden');
         document.getElementById('home-button').classList.add('hidden');
+
       };
 
       document.getElementById('home-button').addEventListener('click', navigateHome);
@@ -292,26 +321,58 @@
         const usersInput = document.querySelector('#query-input').value;
         console.log('User input:', usersInput);
 
-        const response = await fetch(
-          'https://noggin.rea.gent/responsible-asp-9597',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: 'Bearer rg_v1_vatz9spc2krrl9u5pottbxbgs3llq4cdxb9m_ngk',
-            },
-            body: JSON.stringify({ input: usersInput }),
-          }
-        ).then(res => res.text());
+        // Fetch the rabbits JSON first
+        const rabbitsResponse = await fetch('https://raw.githubusercontent.com/louispaulromero/petpairplay/refs/heads/louis/rabbits.json');
+        const rabbitsData = await rabbitsResponse.json();
+
+        const allRabbits = rabbitsData.rabbits;
+
+// import fetch from 'node-fetch'; // for node.js
+
+
+
+const response = await fetch(
+  'https://noggin.rea.gent/extensive-duck-2370',
+  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer rg_v1_gp0obuliinf3t4oqldkod8vzqija0ztben9b_ngk',
+    },
+    body: JSON.stringify({
+      // fill variables here.
+      "userText": usersInput,
+    }),
+  }
+).then(response => response.text());
+        console.log('all rabbits:', allRabbits)
         console.log('Suggestion response:', response);
+
+        // Suppose 'response' is the raw text you get from the AI endpoint
+const responseLines = response.trim().split('\n');
+
+// Extract the rabbit name from the first line
+const rabbitName = responseLines[0].trim();
+
+// Extract the rest of the response (after the first line)
+const rabbitDescription = responseLines.slice(1).join('\n').trim();
+
+// Now you can use these variables:
+console.log('Rabbit Name test:', rabbitName);
+console.log('Rabbit Description test:', rabbitDescription);
 
         // If you need dynamic handling here, update based on your JSON (e.g., match to rabbit names)
         // For now, assuming it's for blurbs; adjust as needed
-        const responseLines = response.split('\n');
-        const nameCandidate = responseLines[0].trim().toLowerCase().replace(/\s+/g, '-');
-        const blurbElement = document.querySelector('#custom-blurb');
-        if (blurbElement) blurbElement.innerHTML = responseLines.slice(1).join('\n').trim();
-        navigateToBlurb(nameCandidate); // Dynamically navigate based on response
+        
+        //const responseLines = response.split('\n');
+        //const nameCandidate = responseLines[0].trim().toLowerCase().replace(/\s+/g, '-');
+        const rabbitId = rabbitName.toLowerCase().replace(/\s+/g, '-');
+
+const blurbElement = document.getElementById(`custom-blurb-${rabbitId}`);
+
+        if (blurbElement) blurbElement.innerHTML = rabbitDescription;
+        navigateToBlurb(rabbitId); // Dynamically navigate based on response
+        
       });
     </script>
   </body>
