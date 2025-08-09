@@ -1,0 +1,203 @@
+/* Merged CSS file combining styles_1 and styles_2 with consistent structure */
+
+body {
+    background: #f5f6fa; /* from styles_1 */
+    display: flex; /* from styles_1 */
+    flex-direction: column; /* from styles_1 */
+    min-height: 100vh; /* from styles_1 */
+    margin: 0; /* from both (same) */
+    justify-content: center; /* from styles_1 */
+    align-items: center; /* from styles_1 */
+    font-family: 'Poppins', 'Arial', sans-serif; /* combined font-families with priority to styles_2 */
+    background-color: #fff; /* from styles_2, but overridden by background from styles_1 for final color */
+}
+
+/* Header (from styles_2) */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.icon-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0;
+}
+
+button {
+    background: #346beb;
+    color: #fff;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(52, 107, 235, 0.12);
+    transition: background 0.2s;
+    user-select: none;
+}
+
+button:active {
+    background: #2651b9;
+}
+
+@media (max-width: 600px) {
+    button {
+        padding: 14px 12px;
+        font-size: 16px;
+    }
+    .nav-buttons {
+        gap: 12px;
+    }
+}
+
+    
+.button-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.home.hidden, .btn.hidden {
+    display: none;
+}
+
+.planet-blurb {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    &.hidden {
+      display: none;
+    }
+}
+
+
+.planet-image {
+    flex: 1;
+}
+
+.planet-image img {
+    max-width: 100%;
+}
+
+.planet-info {
+    flex: 2;
+}
+
+.home img {
+    max-height: 220px;
+}
+
+.home .card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#home-button{
+     background-color: red;
+}
+
+
+/*https://www.w3schools.com/css/css_comments.asp*/
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav h1 {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 40px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.filters{
+    color: white;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
