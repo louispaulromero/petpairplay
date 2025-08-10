@@ -1,100 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PetPairPlay Web App</title>
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <h1>Starter</h1>
-  <div class="nav-buttons">
-    <button id="btn-back"><=</button>
-    <button id="btn-home">Home</button>
-    <button id="btn-forward">=></button>
-  </div>
-
-  <!-- Filter Panel Starts Here -->
-  <div class="filter-box">
-    <div class="section"><label><input type="checkbox"> By proximity</label></div>
-
-    <div class="section">
-      <span class="section-title">Species</span>
-      <div class="checkbox-group">
-        <label><input type="checkbox"> Dog</label>
-        <label><input type="checkbox"> Cat</label>
-        <label><input type="checkbox"> Rabbit</label>
-        <label><input type="checkbox"> Bird</label>
-        <label><input type="checkbox"> Other</label>
-      </div>
-    </div>
-
-    <div class="section">
-      <span class="section-title">Sex</span>
-      <div class="checkbox-group">
-        <label><input type="checkbox"> Male</label>
-        <label><input type="checkbox"> Female</label>
-      </div>
-    </div>
-
-    <div class="section">
-      <span class="section-title">Age</span>
-      <div class="checkbox-group">
-        <label><input type="checkbox"> Baby</label>
-        <label><input type="checkbox"> Adult</label>
-        <label><input type="checkbox"> Senior</label>
-      </div>
-    </div>
-
-    <div class="section">
-      <span class="section-title">Size</span>
-      <div class="checkbox-group">
-        <label><input type="checkbox"> Small</label>
-        <label><input type="checkbox"> Med</label>
-        <label><input type="checkbox"> Large</label>
-      </div>
-    </div>
-
-    <div class="section">
-      <span class="section-title">Adoption Fee</span>
-      <div class="checkbox-group">
-        <label><input type="checkbox"> $0</label>
-        <label><input type="checkbox"> Under $20</label>
-        <label><input type="checkbox"> $20+</label>
-      </div>
-    </div>
-
-    <div class="section">
-      <span class="section-title">Open to special needs?</span>
-      <div class="checkbox-group">
-        <label><input type="checkbox"> Yes</label>
-        <label><input type="checkbox"> No</label>
-      </div>
-    </div>
-
-    <div class="section">
-      <span class="section-title">Other</span>
-      <div class="checkbox-group">
-        <label><input type="checkbox"> Hypoallergenic</label>
-        <label><input type="checkbox"> Good with kids/other animals</label>
-      </div>
-    </div>
-
-    <div class="section">
-      <span class="section-title">Time Commitment</span>
-      <div class="slider-labels">
-        <span>0 hrs</span>
-        <span>24 hrs</span>
-      </div>
-      <input type="range" min="0" max="24" value="0" class="time-slider" id="time-slider">
-      <div class="slider-value">Selected: <span id="slider-value">0</span> hrs</div>
-    </div>
-
-    <button class="apply-button">Apply Filter</button>
-  </div>
-  <!-- Filter Panel Ends Here -->
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pet Pair Play</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
