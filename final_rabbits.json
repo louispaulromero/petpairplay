@@ -1,0 +1,180 @@
+{
+  "rabbits": [
+    {
+      "card_page": {
+        "id": "rabbit1",
+        "image": "/rabbits/rabbit1.png",
+        "species": "Rabbit",
+        "name": "Ball",
+        "sex": "Male",
+        "breed": "Netherland Dwarf",
+        "age": 2,
+        "adoption_fee": 50,
+        "distance": 15.2
+      },
+      "details_page": {
+        "id": "rabbit1",
+        "name": "Ball",
+        "image": "/rabbits/rabbit1.png",
+        "location": "Springfield Animal Shelter",
+        "distance": 15.2,
+        "sex": "Male",
+        "breed": "Netherland Dwarf",
+        "weight": 2.3,
+        "age": 2,
+        "adoption_fee": 50,
+        "personality_traits": ["friendly", "curious", "playful"],
+        "biography": ""
+      },
+      "filter_menu": {},
+      "simulation_page": {
+        "hunger": 40,
+        "hapiness": 50,
+        "toilet": 30,
+        "foodPreference": {
+          "grass": { "hunger": -10, "hapiness": -15 },
+          "banana": { "hunger": -30, "hapiness": 20 },
+          "carrot": { "hunger": -35, "hapiness": 10 },
+          "grass2": { "hunger": -20, "hapiness": 30 },
+          "pellets": { "hunger": -20, "hapiness": -10 },
+          "toy": { "hunger": 0, "hapiness": 50 }
+        },
+        "toiletPreference": {
+          "toilet": { "toilet": -50, "hapiness": 10 }
+        }
+      }
+    },
+    {
+      "card_page": {
+        "id": "rabbit2",
+        "image": "/rabbits/rabbit2.png",
+        "species": "Rabbit",
+        "name": "Floppy",
+        "sex": "Female",
+        "breed": "Holland Lop",
+        "age": 3,
+        "adoption_fee": 60,
+        "distance": 10.5
+      },
+      "details_page": {
+        "id": "rabbit2",
+        "name": "Floppy",
+        "image": "/rabbits/rabbit2.png",
+        "location": "Greenfield Animal Shelter",
+        "distance": 10.5,
+        "sex": "Female",
+        "breed": "Holland Lop",
+        "weight": 2.8,
+        "age": 3,
+        "adoption_fee": 60,
+        "personality_traits": ["gentle", "shy", "affectionate"],
+        "biography": ""
+      },
+      "filter_menu": {},
+      "simulation_page": {
+        "hunger": 55,
+        "hapiness": 65,
+        "toilet": 45,
+        "foodPreference": {
+          "grass": { "hunger": -15, "hapiness": -10 },
+          "banana": { "hunger": -25, "hapiness": -15 },
+          "carrot": { "hunger": -30, "hapiness": 20 },
+          "grass2": { "hunger": -10, "hapiness": 35 },
+          "pellets": { "hunger": -25, "hapiness": 20 },
+          "toy": { "hunger": 0, "hapiness": 45 }
+        },
+        "toiletPreference": {
+          "toilet": { "toilet": -50, "hapiness": 10 }
+        }
+      }
+    },
+    {
+      "card_page": {
+        "id": "rabbit3",
+        "image": "/rabbits/rabbit3.png",
+        "species": "Rabbit",
+        "name": "Thumper",
+        "sex": "Male",
+        "breed": "Lionhead",
+        "age": 1,
+        "adoption_fee": 55,
+        "distance": 8.7
+      },
+      "details_page": {
+        "id": "rabbit3",
+        "name": "Thumper",
+        "image": "/rabbits/rabbit3.png",
+        "location": "Downtown Animal Shelter",
+        "distance": 8.7,
+        "sex": "Male",
+        "breed": "Lionhead",
+        "weight": 2.0,
+        "age": 1,
+        "adoption_fee": 55,
+        "personality_traits": ["energetic", "curious", "friendly"],
+        "biography": ""
+      },
+      "filter_menu": {},
+      "simulation_page": {
+        "hunger": 45,
+        "hapiness": 70,
+        "toilet": 60,
+        "foodPreference": {
+          "grass": { "hunger": -12, "hapiness": 10 },
+          "banana": { "hunger": -28, "hapiness": -20 },
+          "carrot": { "hunger": -32, "hapiness": 15 },
+          "grass2": { "hunger": -18, "hapiness": -15 },
+          "pellets": { "hunger": -22, "hapiness": 18 },
+          "toy": { "hunger": 0, "hapiness": 40 }
+        },
+        "toiletPreference": {
+          "toilet": { "toilet": -50, "hapiness": 10 }
+        }
+      }
+    },
+    {
+      "card_page": {
+        "id": "rabbit4",
+        "image": "/rabbits/rabbit4.png",
+        "species": "Rabbit",
+        "name": "Snowball",
+        "sex": "Female",
+        "breed": "Flemish Giant",
+        "age": 4,
+        "adoption_fee": 70,
+        "distance": 12.3
+      },
+      "details_page": {
+        "id": "rabbit4",
+        "name": "Snowball",
+        "image": "/rabbits/rabbit4.png",
+        "location": "Eastside Animal Shelter",
+        "distance": 12.3,
+        "sex": "Female",
+        "breed": "Flemish Giant",
+        "weight": 6.5,
+        "age": 4,
+        "adoption_fee": 70,
+        "personality_traits": ["calm", "gentle", "loving"],
+        "biography": ""
+      },
+      "filter_menu": {},
+      "simulation_page": {
+        "hunger": 50,
+        "hapiness": 60,
+        "toilet": 25,
+        "foodPreference": {
+          "grass": { "hunger": -20, "hapiness": -25 },
+          "banana": { "hunger": -35, "hapiness": 25 },
+          "carrot": { "hunger": -40, "hapiness": -15 },
+          "grass2": { "hunger": -22, "hapiness": 30 },
+          "pellets": { "hunger": -25, "hapiness": -10 },
+          "toy": { "hunger": 0, "hapiness": 50 }
+        },
+        "toiletPreference": {
+          "toilet": { "toilet": -50, "hapiness": 10 }
+        }
+      }
+    }
+  ]
+}
