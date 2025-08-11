@@ -1,39 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PetPairPlay Web App</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <!--HEADER from index_angel.html -->
-  <header class="app-header">
-    <div class="logo">
-      <img src="./assets/petpairplaylogo.svg" alt="PetPairPlay Logo" class="logo-icon" />
-      <span class="logo-text">Pet Pair Play</span>
-    </div>
-
-    <div class="header-icons">
-      <button class="icon-btn" aria-label="Learn">
-        <img src="./assets/education-center.svg" alt="Graduation cap icon for Education Center" />
-      </button>
-      <button class="icon-btn" aria-label="Notifications">
-        <img src="./assets/Notification.svg" alt="Bell icon for Notifications" />
-      </button>
-      <button class="icon-btn" aria-label="Profile">
-        <img src="./assets/profile.svg" alt="User profile icon" />
-      </button>
-    </div>
-  </header>
-  
-  <div class="nav-buttons">
-    <button id="btn-back"><=</button>
-    <button id="btn-home">Home</button>
-    <button id="btn-forward">=></button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pet Pair Play</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
