@@ -1,0 +1,9 @@
+.go-back-arrow{
+    width: 20px;
+    color: lightgray;
+    position: fixed;      /* 固定位置，不随页面滚动 */
+    top: 60px;            /* 在 header 下方 */
+    left: 20px;           /* 靠左留一点边距 */
+    z-index: 1000;        /* 保证在其他内容之上 */
+    cursor: pointer;
+}

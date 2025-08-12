@@ -1,0 +1,53 @@
+.app-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0 3vw;
+
+}
+.logo-link{
+    color: inherit;          /* 继承父元素字体颜色 */
+    text-decoration: none; 
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.logo-icon {
+    width: 40px;
+    height: auto;
+  }
+
+.logo-text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.header-icons{
+    display: flex;
+
+    gap: 4px;
+}
+.icon-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.header-icons img{
+    width: 30px;
+    height: auto;
+}
