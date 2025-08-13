@@ -1,18 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PetPairPlay Web App</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <h1>Starter</h1>
-  <div class="nav-buttons">
-    <button id="btn-back"><=</button>
-    <button id="btn-home">Home</button>
-    <button id="btn-forward">=></button>
-  </div>
-  <script src="script.js"></script>
-</body>
+<!-----------------Head------------------>
+  <head>
+    <meta charset="UTF-8"/> <!--Text encoding (standard)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--Responsive design-->
+
+    <title>Training-Articles</title> <!--Title that shows up in browser-->
+
+    <link rel="icon" type="image/svg+xml" href="vite.svg"/> <!--Browser icon, can change-->
+    <link rel="stylesheet" href="/src/style.css"/> <!--Links CSS-->
+
+    <!-- Importing font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!--Additional notes for myself 
+      - http://localhost:5173/#
+      - Articles will be stored in the json file, article class defined in css, 
+        manually accessed in html 
+      - Work Process: load the media (json files, pngs), write skeleton in html, create
+        classes in css, revise html, then add exception handling + other hygiene practices  
+    -->
+  </head>
+
+<!-----------------Body------------------>
+  <body>
+    <div id="app"> <!--Main container for JavaScript to access-->
+      <div class="container">
+
+        <!-- Top Navigation -->
+        <header class="nav-bar">
+          <div class="brand">
+            <img src="/assets/petpairplaylogo.svg" alt="Pet Pair Play logo" class="logo">
+            <span>Pet Pair Play</span>
+          </div>
+          <div class="nav-icons">
+            <!-- cap, bell, user icons -->
+            <img src="/assets/education-center.svg" alt="Education Center Icon" class="icon">
+            <img src="/assets/Notification.svg" alt="Notification icon" class="icon">
+            <img src="/assets/Profile.svg" alt="Profile Icon" class="icon">
+          </div>
+        </header>
+
+        <!-- Search -->
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <button type="button" class="search-btn" aria-label="Search">
+            <img src="/assets/magnifying-glass.png" alt="" width="18" height="18" />
+          </button>
+        </div>
+
+        <!-- Completed Section -->
+        <section class="completed-section">
+          <h2>Completed</h2>
+          <!-- Added card--column to match resource card width -->
+          <div class="card pet-card card--column">
+            <img src="/ball.png" alt="Rabbit-Ball" />
+            <div class="card-info">
+              <h3>Ball</h3>
+              <p>Male<br>Netherland Dwarf<br>4 yrs 7 months<br>$50 adoption fee</p>
+              <span class="distance">20 mi</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Related Resources Section -->
+        <section class="resources-section">
+          <h2>Related Resources</h2>
+          <div class="resource-list" id="article-previews">
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script> <!--Connects JavaScript-->
+  </body>
 </html>
