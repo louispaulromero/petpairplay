@@ -1,0 +1,214 @@
+.display-page-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin:0 3vw;
+}
+.display-body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 4px;
+  
+}
+/* Styles for wrapping the search box */
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.search-bar, .help-me-choose-bar {
+  display: flex;
+  align-items: center;  /* 垂直居中 */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;  /* 圆角生效 */
+  /* width: 80vw; 你可以自定义宽度 */
+  margin: 1vh 0;
+  height: 5.5vh;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar:focus-within, .help-me-choose-bar:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.search-bar input,  .help-me-choose-bar input{
+  flex: 1; /* 占满剩余空间 */
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  outline: none; /* 去掉蓝色边框 */
+}
+
+.search-bar button, .help-me-choose-bar button {
+  background-color:white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;  /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  transition: background-color 0.2s ease;
+}
+
+.search-bar button:hover,.help-me-choose-bar button:hover {
+  background-color: #f8f9fa;
+}
+
+.search-bar button:active,.help-me-choose-bar button:active  {
+  background-color: #e9ecef;
+}
+
+.search-bar button img {
+  width: 20px;  /* 控制图标大小 */
+  height: 20px;
+}
+
+.sort-part{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+.sort-icon{
+  width: 30px;
+}
+.sort-button{
+  display: flex;
+  align-items: center; /* 让 img 和 span 垂直居中 */
+  gap: 6px; /* img 和文字间隔 */
+  font-size: 1 rem;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0 0;
+}
+.clear-filters-button {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+.clear-filters-button:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+.sort-part p {
+  font-size: 0.8rem;
+}
+
+.rabbit-link{
+  color: inherit;          /* 继承父元素字体颜色 */
+  text-decoration: none;   /* 去掉下划线 */
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  color: #6c757d;
+}
+
+.no-results p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.no-results p:first-child {
+  font-size: 18px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* margin-bottom: 1vh; */
+
+  justify-content: space-between;
+}
+
+.results-text {
+  font-size: 0.9rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+.top-controls .search-bar {
+  flex: 1;
+}
+
+.saved-rabbits-btn {
+  margin-bottom: 20px; /* Adds space below button */
+}
+
+
+.saved-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  max-width: 250px;
+}
+
+.saved-buttons .btn {
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-align: left; /* so the arrow + text align nicely */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.back-to-display-btn img {
+  filter: brightness(0) invert(1); /* makes back arrow white if on dark bg */
+}
+
+.btn-outline-primary img {
+  filter: none; /* normal arrow in outline button */
+}
+
+/* Optional hover tweaks */
+.saved-buttons .btn:hover {
+  transform: translateY(-1px);
+}
+
+.saved-rabbit-btn-and-cache-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.cache-btn{
+  width: 50px;
+  font-size: 7px;
+  background-color: white;
+  border: 0.5px solid #ccc;
+  margin-bottom: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.saved-rabbit-button{
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+
+  cursor: pointer;
+}

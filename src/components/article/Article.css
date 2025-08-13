@@ -1,0 +1,42 @@
+.article-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    
+    margin: 30px  30px;
+}
+
+.article-header{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.article-header p {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.article-img img{
+    width: 250px;
+    height: auto;
+}
+
+.video-control {
+    width: 260px;              /* 占满容器宽度 */
+    aspect-ratio: 16 / 9;     /* 保持比例 */
+    height: auto;             /* 高度自动计算 */
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+  }
+
+.article-sub-header p{
+    font-size: 16px;
+    font-weight:550;
+}
+
+.content-container{
+    margin: 10px 
+}
+

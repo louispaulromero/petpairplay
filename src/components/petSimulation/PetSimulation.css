@@ -1,0 +1,273 @@
+.pet-simulation-page{
+    background: linear-gradient(to bottom, #87CEEB, #98FB98);
+}
+.pet-simulation{
+    display: flex;
+    
+    position: relative;
+    /* height: 60vh; */
+}
+
+.items-area{
+    position: absolute; /* 使用绝对定位 */
+    top: 70px; /* 从页面顶部的固定位置开始 */
+    left: 15px; /* 从页面左侧的固定位置开始 */
+    width: 20vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: row; /* 改为行方向 */
+    flex-wrap: wrap; /* 允许换行，实现两列布局 */
+    align-content: flex-start; /* 内容从顶部开始对齐 */
+    justify-content: space-between; /* 两列之间有间距 */
+    gap: 8px; /* 物品之间的间距 */
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.item-image{
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    background: none;
+    border-radius: 10px;
+}
+.item{
+    width: calc(50% - 4px); /* 每个物品占一半宽度，减去gap的一半 */
+    display: flex;
+    justify-content: center; /* 物品图片居中 */
+    position: relative; /* 为tooltip定位做准备 */
+}
+
+/* Tooltip 样式 */
+.item::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none  ;
+    color: black;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    pointer-events: none; /* 防止tooltip干扰拖拽 */
+    margin-bottom: 5px;
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.item:hover::before,
+.item:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.rabbit-container{
+  position: relative;  /* 关键，让内部的绝对定位元素以它为参照 */
+  display: flex;       /* 改为flex布局，便于居中 */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;       /* 让容器填满rabbit-area */
+}
+
+.rabbit-image {
+    width: 300px;      /* 设置固定宽度 */
+    height: 300px;     /* 设置固定高度 */
+    position: relative; /* 改为相对定位，不再使用绝对定位 */
+    bottom: auto;      /* 移除bottom定位 */
+    left: auto;        /* 移除left定位 */
+    transform: none;   /* 移除transform */
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite;
+    max-width: none;   /* 移除max-width限制 */
+    object-fit: contain; /* 保持图片比例 */
+  }
+  
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+}
+
+.happy-rabbit-image{
+    width: 10vw;
+    position: absolute;
+    top: 20%;
+    left:19%
+}
+
+.feeding-item {
+    position: absolute;
+    top: 47%;
+    left: 15%;
+    transform: translateY(-50%);
+    animation: feeding 6s ease-in-out;
+    z-index: 1000;
+  }
+
+  @keyframes feeding {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%) scale(0.5);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+  }
+  
+
+.feeding-item-image {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+  }
+
+
+
+  /* learning progress */
+  .rabbit-learning-progress{
+    width: 60vw;
+    height: 10vh;      /* 设置固定高度 */
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    flex-shrink: 0;    /* 防止被压缩 */
+}
+.simulation-rabbit-name{
+    /* font-weight: bold; */
+    font-size: 22px;
+}
+.heart-icons{
+    display: flex;
+    justify-content:space-between;
+}
+.heart-icons img{
+    width: 30px;
+    height: auto;
+}
+.heart-description p{
+    font-size: 8px;
+}
+.right-area{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60vw;       /* 这里设置宽度 */
+    height: 70vh;      /* 这里设置高度 */
+    margin-left: 30vw; /* 为左侧物品栏留出空间 */
+    /* overflow: hidden;  防止内容溢出 */
+}
+
+.rabbit-area {
+    position: relative;
+    width: 100%;
+    height: 50vh;      /* 设置高度，给rabbit-learning-progress留出空间 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;     /* 移除顶部间距，避免重合 */
+    overflow: hidden;  /* 防止内容溢出 */
+}
+
+.rabbit-talk-area {
+  height: 10%;           /* 占父容器高度的 10% */
+  width: 100%;           /* 宽度占满 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* progress bars */
+.learning-progress-bar-area {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 20px 20px;
+  margin-bottom: 50px;
+  box-sizing: border-box;  /* 确保padding不会导致溢出 */
+  overflow: hidden;        /* 防止内容溢出 */
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.progress-label {
+  width: 80px;
+  font-size: 14px;
+  color: #333;
+  flex-shrink: 0;          /* 防止标签被压缩 */
+}
+
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  min-width: 0;            /* 允许缩小 */
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+.progress-fill.happiness {
+  background: linear-gradient(90deg, #ffe08a, #ffd166);
+}
+
+.progress-fill.hunger {
+  background: linear-gradient(90deg, #9be7a9, #57cc99);
+}
+
+.progress-fill.toilet {
+  background: linear-gradient(90deg, #a8e6cf, #88d8a3);
+}
+
+.progress-value {
+  display: none;           /* 隐藏百分比数字 */
+}
+
+/* 不再需要滚动条样式，因为使用两列布局 */

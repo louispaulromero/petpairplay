@@ -1,0 +1,61 @@
+.instrruction-page{
+    position: relative;
+    padding: 0 10vw;  /* 改用padding代替margin */
+    box-sizing: border-box; /* 确保padding算入宽度 */
+    background: linear-gradient(to bottom, #87CEEB, #98FB98);
+}
+.simulation-instruction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  /* justify-content: center; */
+
+  padding: 10vh 0;
+  width: 100%;        /* 容器宽度最大撑满父容器 */
+  max-width: 100vw;   /* 最大宽度不超过视口宽度 */
+}
+
+.simulation-instruction-header {
+    max-width: 80vw; /* 限制最大宽度 */
+
+}
+.header-text-1{
+    text-align: left;
+    font-size: 40px;
+}
+.header-rabbit-name{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.rabbit-name-logo-contianer{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.simulation-instruction-header img{
+    width: 200px;
+    height: auto;
+    border-radius: 90px;  /* 圆角适当调整 */
+    object-fit: contain; /* 保持比例缩放 */
+}
+
+.simulation-instruction-content p{
+    font-size: 25px;
+}
+
+.simulation-instruction-button{
+    position: fixed;
+    right: 15vw;
+    bottom: 8vh;
+    width: 80px;
+    height: 34px;
+    border-radius: 10px;
+    border: 1ch;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
