@@ -1,4 +1,3 @@
 # Pet Pair Play
 
-## Try App Here
-https://petpairplay.netlify.app/
+## Try App Here: https://petpairplay.netlify.app/
