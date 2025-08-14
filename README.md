@@ -1,4 +1,4 @@
-<img width="8647" height="3920" alt="image" src="https://github.com/user-attachments/assets/a27726df-d8ba-4e7c-a074-0a2f00eedd25" /><img width="8647" height="3920" alt="image" src="https://github.com/user-attachments/assets/73c0d613-fa6a-45ad-82bf-46b9bd0a161a" /># PetPairPlay
+# PetPairPlay
 
 ## Try it out at: https://petpairplay.netlify.app/
 
