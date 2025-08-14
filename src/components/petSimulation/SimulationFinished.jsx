@@ -10,7 +10,7 @@ const SimulationFinished = ({ isVisible, onClose, rabbitName, rabbitId }) => {
       <div className="simulation-finished-modal">
         <div className="finished-header">
           <img src={petPairLogo} alt="" />
-          <h2> Pet Pair Play</h2>
+          <h2><p> Pet Pair Play</p></h2>
         </div>
         
         <div className="finished-content">
@@ -34,15 +34,15 @@ const SimulationFinished = ({ isVisible, onClose, rabbitName, rabbitId }) => {
           <div className="achievements">
             <div className="achievement-item">
               <span className="achievement-icon">🍽️</span>
-              <span>Fed to satisfaction</span>
+              <span><p>Fed to satisfaction</p></span>
             </div>
             <div className="achievement-item">
               <span className="achievement-icon">😊</span>
-              <span>Maximum happiness reached</span>
+              <span><p>Maximum happiness reached</p></span>
             </div>
             <div className="achievement-item">
               <span className="achievement-icon">🚽</span>
-              <span>All bathroom needs met</span>
+              <span><p>All bathroom needs met</p></span>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ const SimulationFinished = ({ isVisible, onClose, rabbitName, rabbitId }) => {
           </button> */}
           <Link to={'/display'} key={rabbitId}>
           <button className="restart-btn" >
-            Next
+            <p>Next</p>
           </button>
           </Link>
         </div>

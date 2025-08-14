@@ -8,7 +8,7 @@ const Shelter = () => {
       <LeftArrow/>
 
       <div className='shelter-container'>
-          <h1 className="org-title">House Rabbit Society</h1>
+          <h1 className="org-title"><p>House Rabbit Society</p></h1>
 
           <figure className="org-hero">
             <img src={ShelterImage} alt="Exterior view of the House Rabbit Society building"  className='shelterImage'/>
@@ -18,17 +18,17 @@ const Shelter = () => {
           <div className="org-contact">
             <div className="row">
               <span className="label"><p>Email</p></span>
-              <a className="value" href="mailto:foster@houserabbit.org">foster@houserabbit.org</a>
+              <a className="value" href="mailto:foster@houserabbit.org"><p>foster@houserabbit.org</p></a>
             </div>
             <div className="row">
               <span className="label"><p>Phone</p></span>
-              <a className="value" href="tel:+15109707575">(510) 970-7575</a>
+              <a className="value" href="tel:+15109707575"><p>(510) 970-7575</p></a>
             </div>
             <div className="row">
               <span className="label"><p>Location</p> </span>
               <address className="value">
-                148 Broadway, Richmond,<br />
-                CA 94804
+                <p>148 Broadway, Richmond,<br />
+                CA 94804</p>
               </address>
             </div>
           </div>

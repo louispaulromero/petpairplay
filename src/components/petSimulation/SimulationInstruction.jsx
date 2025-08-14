@@ -31,7 +31,7 @@ const SimulationInstruction = () => {
 
             </div>
             <Link to={`/display/simulation/${id}`} key={'ToSimulation'}>
-                    <button className='simulation-instruction-button'>Start</button>
+                    <button className='simulation-instruction-button'><p>Start</p></button>
             </Link>
     </div>
     

@@ -218,7 +218,7 @@ const RabbitDetail = () => {
 
                 <Link to={'/display/shelter'} key={'gotoshetler'}>
                     <div className="contact-button-container">
-                        <button className="contact-button">Adopt Me</button>
+                        <button className="contact-button"><p>Adopt Me</p></button>
                     </div>
                 </Link>
 

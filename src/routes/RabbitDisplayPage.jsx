@@ -256,14 +256,14 @@ const RabbitDisplayPage = () => {
                                     style={{ display: "flex", alignItems: "center", gap: "6px" }}
                                 >
                                     <img src={LeftArrowIcon} alt="Back" style={{ width: "18px" }} />
-                                    Back to All Rabbits
+                                    <p>Back to All Rabbits</p>
                                 </button>
 
                                 <button
                                     className="btn btn-danger clear-saved-rabbits-btn"
                                     onClick={clearAllSavedRabbits}
                                 >
-                                    Clear Saved Rabbits
+                                    <p>Clear Saved Rabbits</p>
                                 </button>
                             </>
                         )}
@@ -276,7 +276,7 @@ const RabbitDisplayPage = () => {
 
                     {hasActiveFilters() && (
                         <button className="clear-filters-button" onClick={clearAllFilters}>
-                            Clear All Filters
+                            <p>Clear All Filters</p>
                         </button>
                     )}
                 </div>

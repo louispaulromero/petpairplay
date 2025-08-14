@@ -31,12 +31,13 @@
     align-items: center; /* 垂直居中 */
   }
 
-  .card-rabbit-name {
+.card-rabbit-name {
     font-size: 1.5rem;
     white-space: nowrap; /* 不换行 */
     overflow: hidden; /* 隐藏超出部分 */
     text-overflow: ellipsis; /* 超出部分显示省略号 */
     max-width: 70%; /* 避免占满整行，留给右边元素空间 */
+    margin: 0 vw;
 }
 
 
@@ -45,4 +46,20 @@
 }
 .card-body p{
     color: lightgray;
+}
+.card-rabbit-name p{
+    color: black;
+    font-weight: 550;
+}
+
+
+.card-body{
+    width: 100%;
+    max-width: 200px;  /* or whatever suits your layout */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    overflow-y: auto;
+    scrollbar-width: none；
 }

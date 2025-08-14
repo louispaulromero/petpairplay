@@ -1,5 +1,7 @@
 # PetPairPlay
 
+## Try it out at: https://petpairplay.netlify.app/
+
 ## Overview
 PetPairPlay is a **frontend React web application** built with **Vite**. It allows users to browse adoptable rabbits, filter by preferences, read educational articles, view shelter information, and try a simple pet simulation.
 
@@ -160,5 +162,3 @@ This page helps potential adopters:
 - Learn more about the shelter’s approach to rabbit care
 - Understand their adoption philosophy
 - Get in touch with the shelter directly for adoption or volunteering
-
-

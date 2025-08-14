@@ -10,17 +10,25 @@ const RabbitCard = ({rabbit}) =>{
     // console.log(cardData)
     return (
         <div className="rabbit-card-container">
+            <div className="card-body">
            <img src={cardData?.image} alt="rabbit photo" className="card-image"/>
+            <div className="card-header-conatiner">
             <div className="card-header">
                 <div className="card-rabbit-name"><p>{cardData?.name}</p></div>
                 {/* <div className="rabbit-distance"><p>{cardData?.distance}mi</p></div> */}
             </div>
-            <div className="card-body">
+
+            </div>
+
+            <div className="card-body-container">
+            
                 <div><p>{cardData?.sex}</p>  </div>
                 <div><p>{cardData?.breed}</p></div>
                 <div><p>{cardData?.age} yrs</p></div>
                 <div><p>${cardData?.adoption_fee} adoption fee</p></div>
             </div>
+            </div>
+
         </div>
     )
 }

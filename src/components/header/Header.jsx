@@ -12,7 +12,7 @@ const Header = ()=>{
             <Link to={'/display'} key='backHome' className="logo-link">
                 <div className="logo">
                     <img src={petpairplaylogo} alt="PetPairPlay Logo" className="logo-icon" />
-                    <span className="logo-text">Pet Pair Play</span>
+                    <span className="logo-text"><p>Pet Pair Play</p></span>
                 </div>
             </Link>
             

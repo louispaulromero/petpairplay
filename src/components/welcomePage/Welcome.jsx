@@ -12,7 +12,7 @@ const Welcome = ()=>{
             <img src={LOGO} alt="" className="pet-pair-logo"/>
             <img className='welcome-image' src={welcomeDogImg} alt="" />
 
-            <div className="welcome-header">Welcome to Pet Pair Play.</div>
+            <div className="welcome-header"><p>Welcome to Pet Pair Play.</p></div>
             
             <Link to={'/display'}>
                 <div className="circle-arrow">
