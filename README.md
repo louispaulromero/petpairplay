@@ -1,4 +1,4 @@
-# PetPairPlay
+<img width="8647" height="3920" alt="image" src="https://github.com/user-attachments/assets/a27726df-d8ba-4e7c-a074-0a2f00eedd25" /><img width="8647" height="3920" alt="image" src="https://github.com/user-attachments/assets/73c0d613-fa6a-45ad-82bf-46b9bd0a161a" /># PetPairPlay
 
 ## Try it out at: https://petpairplay.netlify.app/
 
@@ -128,9 +128,9 @@ You can also:
 After you click learn button in the individual profile page, it will redirect to the **Pet Simulation Page**, which lets you interact with your chosen rabbit in a virtual environment.  
 <br>
 <p float="left">
-  <img src="public/readme/pet_simulation_1.png" alt="pet_simulation_1" width="200" />
-  <img src="public/readme/pet_simulation_2.png" alt="pet_simulation_2" width="200" />
-  <img src="public/readme/pet_simulation_3.png" alt="pet_simulation_3" width="200" />
+  <img src="public/readme/pet_simulation_1.png" alt="pet_simulation_1" width="250" />
+  <img src="public/readme/pet_simulation_2.png" alt="pet_simulation_2" width="250" />
+  <img src="public/readme/pet_simulation_3.png" alt="pet_simulation_3" width="250" />
 </p>
 
 **Features:**
@@ -143,7 +143,9 @@ After you click learn button in the individual profile page, it will redirect to
   - When you reach 3 hearts, you “graduates” from the simulation.
 **AI Integration**: The bunny can “chat” with you, giving preferences or needs (e.g., *"I don't like banana"*, *"I want toilet"*). 
 <p>
-<img src="public/readme/pet_simulation_4.png" alt="pet_simulation_4" width="300" /> </p>
+<img src="public/readme/pet_simulation_4.png" alt="pet_simulation_4" width="300" />
+</p>
+
 After you click the **next button**, it will redirect to the main page.
 
 ## 5. Shelter Information Page
